@@ -8,7 +8,7 @@ from sacred.utils import (PATHCHANGE, convert_to_nested_dict,
                           iter_path_splits, iter_prefixes, iterate_flattened,
                           iterate_flattened_separately, join_paths,
                           recursive_update, set_by_dotted_path, get_inheritors)
-from utils import convert_camel_case_to_snake_case
+from sacred.utils import convert_camel_case_to_snake_case
 
 
 def test_recursive_update():
