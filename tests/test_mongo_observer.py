@@ -220,7 +220,7 @@ def test_pickle_numpy_arrays_son_manipulator():
     assert np.all(redoc['nested']['ones'] == document['nested']['ones'])
 
 
-# ###################### MongoOption ##########################################
+# ###################### MongoDbOption ###################################### #
 
 def test_parse_mongo_db_arg():
     assert MongoDbOption.parse_mongo_db_arg('foo') == ('localhost:27017',
