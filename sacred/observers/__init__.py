@@ -10,4 +10,10 @@ if opt.has_pymongo:
 else:
     MongoObserver = opt.MissingDependencyMock('pymongo')
 
-__all__ = ('RunObserver', 'MongoObserver')
+if opt.has_sqlalchemy:
+    from sacred.observers.sql import SqlObserver
+else:
+    SqlObserver = opt.MissingDependencyMock('sqlalchemy')
+
+
+__all__ = ('RunObserver', 'MongoObserver', 'SqlObserver')
